@@ -1,0 +1,135 @@
+header{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    /*background-color: black;*/
+    display: flex;
+    justify-content: space-between;
+    padding:0 10px;
+  }
+ 
+// nav ul
+
+.nav-overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    /*padding-top:100px;*/
+    left: 0;
+    /*background-color: rgb(0,0,0);*/
+    background-color: rgba(255,255,255, 0.7);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+.navBrand{
+    z-index: 1000;
+    width: 200px;
+}
+#XMLID_2_{
+    transition: fill ease 400ms;
+}
+.brandSvg{fill:#FFFFFF;}
+.brandSvgRed{fill:red;}
+.nav-height{
+    height:100% !important;
+}
+
+.nav-overlay-content {
+    position: relative;
+    top:0;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    font-size:42px;
+    text-transform:uppercase;
+    font-weight: bold;
+
+    li{
+        list-style-type: none;
+        text-align: left;
+        padding-left:20%;
+    }
+}
+
+
+.nav-overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+#closeNav{
+    color:$main;
+}
+
+
+.nav-overlay a:hover, .nav-overlay a:focus {
+    color: black;
+}
+
+.nav-overlay .closebtn {
+    position: absolute;
+    top: 0;
+    margin-top: -6px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .nav-overlay {overflow-y: auto;}
+  .nav-overlay a {font-size: 20px}
+  .nav-overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+
+
+// burger-icon
+
+.button-burger{
+    background-color: transparent;
+    border:none;
+    z-index:100;
+    height: 70px;
+}
+.container-burger {
+    display: inline-block;
+    cursor: pointer;
+    transition: all 600ms;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    transition: 0.4s;
+    background-color: white;
+}
+.bar2    {
+    width: 25px;
+    margin-left:10px;
+    }
+
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+    background-color: red;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+    background-color: red;
+}

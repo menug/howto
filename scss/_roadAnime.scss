@@ -1,0 +1,98 @@
+#roadAnime{
+	overflow: hidden;
+	position: relative;
+	height: 270px; 
+}
+
+.mta, .road, .trees,{
+	position: absolute; 
+	
+		img{
+			width: 100%;
+		}
+}
+.mta{
+	width: 200%;
+	bottom:20px;
+	z-index: 100;
+	right:0;
+	animation:mta 17s linear infinite;
+
+}
+.trees{
+	width: 70%;
+	bottom:20px;
+	left:15%;
+	z-index: 200;
+
+}
+.road{
+	width:110%;
+	bottom:1px;
+	z-index: 300;
+}
+.car{
+	position: absolute; 
+	bottom:9px;
+	width: 20%;
+	z-index: 400;
+	right:-200px;
+
+	animation:car 27s linear infinite;
+
+	img{width:100%;}
+
+
+}
+.car2{
+	position: absolute; 
+	    bottom: 4px;
+    width: 14%;
+	z-index: 400;
+	right:-700px;
+
+	animation:car2 17s linear infinite;
+
+	img{width:100%;}
+
+
+}
+
+@keyframes car{
+	0%{
+		right:-200px;
+	}
+	100%{
+		right:110%;
+	}
+}
+
+@keyframes car2{
+	0%{
+		right:-700px;
+	}
+	70%{
+		right:25%;
+	}
+	100%{
+		right:110%;
+	}
+}
+
+
+@keyframes mta{
+	0%{
+		right:0;
+	}
+	100%{
+		right:-100%;
+	}
+}
+
+@media (max-width: 800px) {
+	#roadAnime{
+
+    height: 160px;
+}
+}
+
